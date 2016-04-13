@@ -10,5 +10,6 @@ function love.conf(t)
 	t.window.height = 0
 	t.window.borderless = true
 	t.window.resizable = false
+	t.window.vsync = false
 	
 end
