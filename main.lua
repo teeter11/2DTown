@@ -5,6 +5,9 @@ function love.load()
 	require("input")
 	require("loadvalues")
 	require("scripts.ui.global.stats")
+	require("scripts.ui.mainmenu")
+	require("scripts.ui.mainmenubackground")
+	require("scripts.ui.clickcheck.mainmenu.main")
 	
 	LoadValues()
 	LoadContent()
@@ -28,7 +31,12 @@ function love.draw()
 		
 	elseif gameState == "mainmenu" then
 	
+		DrawMainMenu()
+		ChangeBackgroundColor()
+		
 	elseif gameState == "ingame" then
+	
+		
 	
 	end
 	
