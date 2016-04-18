@@ -9,6 +9,8 @@ function DrawMainMenu()
 
 	if mainMenuState == "main" then
 	
+		MM_MainClickCheck()
+	
 		love.graphics.draw(GameLogo,windowWidth*.5-(GameLogo:getWidth()/2),windowHeight*.15)
 		
 		love.graphics.setColor(0,0,0,100)
@@ -45,11 +47,27 @@ function DrawMainMenu()
 	
 		love.graphics.setColor(255,255,255,255)
 		
-		MM_MainClickCheck()
-		
 	elseif mainMenuState == "play" then
 	
+		MM_PlayClickCheck()
+	
+		love.graphics.setColor(0,0,0,100)
+	
 		love.graphics.rectangle("fill",windowWidth*.5-300,windowHeight*.35-10,600,400,15,15,10)
+		
+		if mouseX > windowWidth*.5-150 and mouseX < windowWidth*.5-150 + 300 and mouseY > windowHeight*.75 and mouseY < windowHeight*.75 + 120 then
+			
+			love.graphics.rectangle("fill",windowWidth*.5-160,windowHeight*.75-10,320,140,15,15,10)
+			
+		else
+			
+			love.graphics.rectangle("fill",windowWidth*.5-150,windowHeight*.75,300,120,15,15,10)
+		
+		end
+		
+		love.graphics.setColor(255,255,255,255)
+		
+		love.graphics.draw(SelectSaveLogo,windowWidth*.5-(SelectSaveLogo:getWidth()/2),windowHeight*.08)
 	
 	elseif mainMenuState == "options" then
 	

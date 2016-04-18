@@ -8,6 +8,7 @@ function love.load()
 	require("scripts.ui.mainmenu")
 	require("scripts.ui.mainmenubackground")
 	require("scripts.ui.clickcheck.mainmenu.main")
+	require("scripts.ui.clickcheck.mainmenu.play")
 	
 	LoadValues()
 	LoadContent()
@@ -44,7 +45,7 @@ end
 
 function love.update(dt)
 
-	if updateCount == 1 then
+	if updateCount >= 1 then
 		updateCount = 0
 		secondCount = secondCount + 1
 	else

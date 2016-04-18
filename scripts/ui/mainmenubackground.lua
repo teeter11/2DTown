@@ -8,7 +8,6 @@ local ColorCount = 0
 	
 function ChangeBackgroundColor()
 	
-	
 	love.graphics.setBackgroundColor(R,G,B)
 	
 	local RandR = math.random(1,5)
