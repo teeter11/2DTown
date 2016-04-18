@@ -4,8 +4,8 @@ mainMenuBackground = {0,0,0}
 
 function DrawMainMenu()
 	
-	mouseX = love.mouse.getX()
-	mouseY = love.mouse.getY()
+	local mouseX = love.mouse.getX()
+	local mouseY = love.mouse.getY()
 
 	if mainMenuState == "main" then
 	
@@ -65,14 +65,29 @@ function DrawMainMenu()
 		
 		end
 		
+		--SLOT 1
+		love.graphics.rectangle("fill",windowWidth*.5-275,windowHeight*.35+10,550,120,15,15,10)
+		love.graphics.setColor(98,217,129,155)
+		love.graphics.rectangle("fill",windowWidth*.5+100,windowHeight*.35+10+30,150,60,15,15,30)
+		
+		love.graphics.setColor(255,255,255,255)
+		love.graphics.setFont(cooperblackGameText)
+		love.graphics.print("NO SAVE",windowWidth*.5-120,windowHeight*.35+10+34)
+		
+		love.graphics.setFont(cooperblackSmall)
+		
 		love.graphics.setColor(255,255,255,255)
 		
 		love.graphics.draw(SelectSaveLogo,windowWidth*.5-(SelectSaveLogo:getWidth()/2),windowHeight*.08)
-	
+		
 	elseif mainMenuState == "options" then
 	
+		
+		
 	elseif mainMenuState == "quit" then
-	
+		
+		
+		
 	end
 	
 end
