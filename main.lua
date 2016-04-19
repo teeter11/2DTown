@@ -4,12 +4,17 @@ function love.load()
 	require("loadcontent")
 	require("input")
 	require("loadvalues")
+	
 	require("scripts.ui.global.stats")
 	require("scripts.ui.global.fonts")
+	
 	require("scripts.ui.mainmenu")
+	
 	require("scripts.ui.mainmenubackground")
+	
 	require("scripts.ui.clickcheck.mainmenu.main")
 	require("scripts.ui.clickcheck.mainmenu.play")
+	require("scripts.ui.ingame.ingameui")
 	
 	LoadValues()
 	LoadContent()
@@ -38,8 +43,9 @@ function love.draw()
 		
 	elseif gameState == "ingame" then
 	
-		
-	
+		love.graphics.setBackgroundColor(69,221,255,255)
+		DrawInGameUI()
+			
 	end
 	
 end

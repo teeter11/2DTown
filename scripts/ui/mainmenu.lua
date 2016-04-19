@@ -67,12 +67,13 @@ function DrawMainMenu()
 		
 		--SLOT 1
 		love.graphics.rectangle("fill",windowWidth*.5-275,windowHeight*.35+10,550,120,15,15,10)
-		love.graphics.setColor(98,217,129,155)
+		love.graphics.setColor(98,217,129,255)
 		love.graphics.rectangle("fill",windowWidth*.5+100,windowHeight*.35+10+30,150,60,15,15,30)
 		
 		love.graphics.setColor(255,255,255,255)
 		love.graphics.setFont(cooperblackGameText)
 		love.graphics.print("NO SAVE",windowWidth*.5-120,windowHeight*.35+10+34)
+		love.graphics.print("PLAY",windowWidth*.5+124,windowHeight*.35+10+38)
 		
 		love.graphics.setFont(cooperblackSmall)
 		
